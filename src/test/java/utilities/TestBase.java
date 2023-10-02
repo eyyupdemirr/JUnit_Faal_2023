@@ -19,9 +19,12 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
     }
-
+public static void deneme(){
+    System.out.println("Bakalim bunuyazacak mi");
+}
     @After
     public void teardown(){
+
         driver.close();
     }
 
