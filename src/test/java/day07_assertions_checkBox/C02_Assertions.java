@@ -26,6 +26,7 @@ import java.time.Duration;
 
 
 public class C02_Assertions {
+
     static WebDriver driver;
 
     @BeforeClass
@@ -72,6 +73,11 @@ public class C02_Assertions {
 
         Assert.assertTrue(searchbox.isEnabled());
 
+
+       // searchbox.click();
+       // searchbox.sendKeys("aykut eren"+Keys.ENTER);
+
+
     }
 
     @Test
@@ -81,4 +87,23 @@ public class C02_Assertions {
         String actualTitle = driver.getTitle();
         Assert.assertNotEquals(unExpectedTitle,actualTitle);
     }
+
+
+    @Test
+    public void arama(){
+        WebElement arama=driver.findElement(By.xpath("//div[@id='search-input']"));
+
+
+
+
+
+        arama.sendKeys("aykut eren "+Keys.ENTER);
+
+
+
+
+    }
+
+
+
 }

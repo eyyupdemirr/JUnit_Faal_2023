@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import utilities.ReusableMethods;
 import utilities.TestBase;
 
 public class C06_JsExecutor extends TestBase {
@@ -27,8 +28,11 @@ public class C06_JsExecutor extends TestBase {
         // ve bu butona click yapin
 
         jse.executeScript("arguments[0].click();", buttonElementi);
+        ReusableMethods.tumSayfaFotoCek(driver,"wise");
         bekle(3);
         jse.executeScript("alert('yasasinnnn');");
+
+
 
         bekle(3);
 
