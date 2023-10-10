@@ -26,7 +26,7 @@ public class C04_RadioButtons {
 
     @After
     public void teardown() {
-        //driver.close();
+        driver.close();
     }
 
     @Test

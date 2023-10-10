@@ -12,12 +12,12 @@ public class C03_JSAlerts extends TestBase {
     @Test
     public void jsAlertTesti() {
         /*
-    1. Test
- - https://the-internet.herokuapp.com/javascript_alerts adresine gidin
- - 1.alert’e tiklayin
- - Alert’deki yazinin “I am a JS Alert” oldugunu test edin
- - OK tusuna basip alert’i kapatin
- */
+      1. Test
+     - https://the-internet.herokuapp.com/javascript_alerts adresine gidin
+         - 1.alert’e tiklayin
+        - Alert’deki yazinin “I am a JS Alert” oldugunu test edin
+     - OK tusuna basip alert’i kapatin
+         */
 
 
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
@@ -34,11 +34,11 @@ public class C03_JSAlerts extends TestBase {
     @Test
     public void canselTest() {
         /*
-2.Test
- - https://the-internet.herokuapp.com/javascript_alerts adresine gidin
- - 2.alert’e tiklayalim
- - Cancel’a basip, cikan sonuc yazisinin “You clicked: Cancel” oldugunu test edin
- */
+        2.Test
+        - https://the-internet.herokuapp.com/javascript_alerts adresine gidin
+        - 2.alert’e tiklayalim
+        - Cancel’a basip, cikan sonuc yazisinin “You clicked: Cancel” oldugunu test edin
+        */
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         driver.findElement(By.xpath("//*[text()='Click for JS Confirm']")).click();
         driver.switchTo().alert().dismiss();

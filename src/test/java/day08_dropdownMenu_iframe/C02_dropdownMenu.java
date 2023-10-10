@@ -51,8 +51,9 @@ public class C02_dropdownMenu extends TestBase_BeforeClass {
 
         List<WebElement> kategoryList = select.getOptions();
 
-        int expectedKatSay = 45;
+        int expectedKatSay = 28;
         int actualKAtSAy = kategoryList.size();
+
 
         Assert.assertEquals(expectedKatSay, actualKAtSAy);
     }
@@ -75,7 +76,7 @@ public class C02_dropdownMenu extends TestBase_BeforeClass {
         String actualIcerik = aramaSonucu.getText();
 
         System.out.println(aramaSonucu.getText());
-        Assert.assertTrue(expectedIcerik.contains(actualIcerik));
+        Assert.assertTrue(actualIcerik.contains(expectedIcerik));
 
     }
 

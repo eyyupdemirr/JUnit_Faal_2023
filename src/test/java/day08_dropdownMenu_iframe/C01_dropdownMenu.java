@@ -31,6 +31,7 @@ public class C01_dropdownMenu extends TestBase {
         select.selectByIndex(1);
         System.out.println(select.getFirstSelectedOption().getText());
 
+
         // 2.Value kullanarak Seçenek 2'yi (Option 2) seçin ve yazdırın
         select.selectByValue("2");
         System.out.println(select.getFirstSelectedOption().getText());
@@ -42,14 +43,15 @@ public class C01_dropdownMenu extends TestBase {
 
         //  4.Tüm dropdown değerleri(value) yazdırın
         List<WebElement> optionsList=select.getOptions();
-        System.out.println(select.getOptions());         // list oldugu icin direk yazdiramayiz
+        System.out.println(select.getOptions()+"------------------");         // list oldugu icin direk yazdiramayiz
 
         for (WebElement each:optionsList
              ) {
-           // System.out.println(select.getFirstSelectedOption().getText());
-            System.out.println(each.getText());
+            System.out.println(select.getFirstSelectedOption().getText()); //  bu List edi opsyonu degil yukarida sectigimizi yazdirir.
+            System.out.println("********"+each.getText());
         }
 
+        System.out.println(select.getFirstSelectedOption().getText());
         //5. Dropdown’un boyutunun 4 olduğunu test edin
         int expectedBoyut=4;
         int actualBoyut=optionsList.size();
